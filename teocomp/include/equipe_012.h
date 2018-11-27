@@ -1,5 +1,8 @@
 #include <stdio.h>
-int funcao(char* fita){
+#include "colors.h"
+
+
+int equipe_012(char* fita){
     char *auxiliar = fita;
     while(*fita != '\0'){
       if(*fita == '0'){
@@ -13,19 +16,18 @@ int funcao(char* fita){
             fita++;
             if(*fita == '\0'){
               *fita = '\0';
-                printf("\n%s\n%s\n", "Cadeia aceita", auxiliar);
+                printf(CLR_GREEN "\n \t %s \n \t %s \n", "Cadeia aceita", auxiliar);
                 return 1;
             }
+          }else{
+            printf(CLR_RED "\n \t %s \n \t %s \n", "Cadeia não aceita", auxiliar);
           }
+        }else{
+          printf(CLR_RED "\n \t %s \n \t %s \n", "Cadeia não aceita", auxiliar);
         }
       }else{
-          printf("\n%s\n%s\n", "Cadeia não aceita", auxiliar);
+          printf(CLR_RED "\n \t %s \n \t %s \n", "Cadeia não aceita", auxiliar);
           return 0;
       }
     }
-}
-
-void main(){
-  char x[] = "012012";
-  funcao(x);
 }
