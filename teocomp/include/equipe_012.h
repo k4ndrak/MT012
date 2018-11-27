@@ -19,7 +19,11 @@ int equipe_012(char* fita){
                 printf(CLR_GREEN "\n \t %s \n \t %s \n", "Cadeia aceita", auxiliar);
                 return 1;
             }
+          }else{
+            printf(CLR_RED "\n \t %s \n \t %s \n", "Cadeia não aceita", auxiliar);
           }
+        }else{
+          printf(CLR_RED "\n \t %s \n \t %s \n", "Cadeia não aceita", auxiliar);
         }
       }else{
           printf(CLR_RED "\n \t %s \n \t %s \n", "Cadeia não aceita", auxiliar);
