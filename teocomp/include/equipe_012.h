@@ -43,10 +43,12 @@ int equipe_012( char* fita ) {
                 } else {
                     /**<< A terceira posição da cadeia é diferente de 2, então informa ao usuário que ela não foi aceita e finaliza. */
                     printf( CLR_RED "\n \t %s \n \t %s \n", "Cadeia não aceita", auxiliar );
+                    return 0;
                 }
             } else {
                 /**<< A segunda posição da cadeia é diferente de 1, então informa ao usuário que ela não foi aceita e finaliza. */
                 printf( CLR_RED "\n \t %s \n \t %s \n", "Cadeia não aceita", auxiliar );
+                return 0;
             }
         } else {
             /**<< A primeira posição da cadeia é diferente de 0, então informa ao usuário que a cadeia não foi aceita e finaliza. */
